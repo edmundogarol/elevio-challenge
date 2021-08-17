@@ -13,7 +13,10 @@ function Ui(props: UiProps) {
     <AppContainer>
       <SearchContainer>
         <h2>Search Elevio Articles</h2>
-        <input placeholder="Search Articles" />
+        <input
+          placeholder="Search Articles"
+          onChange={(e) => searchText(e.target.value)}
+        />
       </SearchContainer>
     </AppContainer>
   );
