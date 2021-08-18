@@ -42,4 +42,31 @@ export const SearchContainer = styled.div`
     border-radius: 0.5em;
     border: 1px solid #a7a7a7;
   }
+
+  .ant-input-suffix {
+    button {
+      background: transparent;
+      border: unset;
+    }
+  }
+
+  .ant-alert,
+  .loading-icon {
+    margin-bottom: 1em;
+  }
+`;
+
+export const ArticleLine = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+
+  span {
+    margin-right: 1.2em;
+  }
+
+  svg {
+    width: 1.2em;
+    height: 1.2em;
+  }
 `;
