@@ -87,7 +87,8 @@ export function* articleViewLogApiCall(action: {
 export default function* appSaga() {
   yield all([
     takeLatest(SEARCH_TEXT, searchTextApiCall),
-    takeLatest(SEARCH_LOG, searchLogApiCall),
-    takeLatest(ARTICLE_VIEW_LOG, articleViewLogApiCall),
+    // Turn off API calls for the sake of testing - api endpoints are dummy endpoints anyway
+    // takeLatest(SEARCH_LOG, searchLogApiCall),
+    // takeLatest(ARTICLE_VIEW_LOG, articleViewLogApiCall),
   ]);
 }
