@@ -22,6 +22,7 @@ export const appReducer = (
       return {
         ...state,
         articles: articles as any[],
+        searching: false,
       };
 
     default:

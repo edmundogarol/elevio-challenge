@@ -8,6 +8,16 @@ export const AppContainer = styled.div`
   justify-content: center;
 `;
 
+export const Logo = styled.img`
+  width: 15em;
+`;
+
+export const SearchInputButtonContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1em;
+`;
+
 export const SearchContainer = styled.div`
   width: 80%;
   margin-left: auto;
@@ -24,7 +34,8 @@ export const SearchContainer = styled.div`
     margin-bottom: 1em;
   }
 
-  input {
+  input,
+  button:not(.search-icon, .ant-alert-close-icon) {
     width: 20em;
     padding: 1em;
     font-size: 1em;

@@ -8,16 +8,17 @@ import { searchText } from "../../actions/App";
 import { AppState } from "../../reducers/App/types";
 
 const stateToProps = (state: StateProps) => {
-  const { articles } = state;
+  const { articles, searching } = state;
 
   return {
     articles,
+    searching,
   };
 };
 
 const dispatchToProps = (dispatch: Dispatch<AnyAction>) => {
   return {
-    searchText: (text: string) => dispatch(searchText(text)),
+    searchTextCall: (text: string) => dispatch(searchText(text)),
   };
 };
 

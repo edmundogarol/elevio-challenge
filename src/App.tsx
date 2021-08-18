@@ -4,6 +4,8 @@ import createSagaMiddleware from "redux-saga";
 import { createStore, applyMiddleware } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 
+import "antd/dist/antd.css";
+
 import AppPage from "./pages/App";
 import appSaga from "./sagas/App";
 import appReducer from "./reducers/App";

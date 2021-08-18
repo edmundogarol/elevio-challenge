@@ -1,7 +1,8 @@
 export type StateProps = {
+  searching: boolean;
   articles: any[];
 };
 
 export type DispatchProps = {
-  searchText: (text: string) => void;
+  searchTextCall: (text: string) => void;
 };
