@@ -4,7 +4,7 @@ import { AnyAction, Dispatch } from "redux";
 import Ui from "./ui";
 
 import { DispatchProps, StateProps } from "./types";
-import { searchText } from "../../actions/App";
+import { articleViewLog, searchLog, searchText } from "../../actions/App";
 import { AppState } from "../../reducers/App/types";
 
 const stateToProps = (state: StateProps) => {
@@ -19,6 +19,8 @@ const stateToProps = (state: StateProps) => {
 const dispatchToProps = (dispatch: Dispatch<AnyAction>) => {
   return {
     searchTextCall: (text: string) => dispatch(searchText(text)),
+    searchLog: (searchText: string) => dispatch(searchLog(searchText)),
+    articleViewLog: (article: number) => dispatch(articleViewLog(article)),
   };
 };
 

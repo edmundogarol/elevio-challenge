@@ -1,5 +1,5 @@
 import { SEARCHING_TEXT, UPDATE_SEARCHED_ARTICLES } from "../../actions/App";
-import { AppState } from "./types";
+import { AppState, Article } from "./types";
 
 const INITIAL_STATE: AppState = {
   articles: [],
@@ -21,7 +21,7 @@ export const appReducer = (
       const { articles } = action.payload;
       return {
         ...state,
-        articles: articles as any[],
+        articles: articles as Article[],
         searching: false,
       };
 

@@ -1,4 +1,9 @@
+export type Article = {
+  id: number;
+  title: string;
+};
+
 export interface AppState {
-  articles: any[];
+  articles: Article[];
   searching: boolean;
 }

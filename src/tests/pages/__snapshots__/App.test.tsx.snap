@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing App UI check rendered ui to match snapshot 1`] = `
+<styled.div>
+  <styled.div>
+    <NavLink
+      to="/"
+    >
+      <styled.img
+        alt="Elevio"
+      />
+    </NavLink>
+    <h2>
+      Search Elevio Articles
+    </h2>
+    <styled.div>
+      <Input
+        onChange={[Function]}
+        onKeyPress={[Function]}
+        placeholder="Search Articles"
+        suffix={
+          <React.Fragment>
+            <Tooltip
+              arrowPointAtCenter={false}
+              autoAdjustOverflow={true}
+              mouseEnterDelay={0.1}
+              mouseLeaveDelay={0.1}
+              placement="top"
+              title="Clear Search"
+            >
+              <button
+                className="search-icon"
+                onClick={[Function]}
+              >
+                <ForwardRef(CloseOutlined) />
+              </button>
+            </Tooltip>
+            <Tooltip
+              arrowPointAtCenter={false}
+              autoAdjustOverflow={true}
+              mouseEnterDelay={0.1}
+              mouseLeaveDelay={0.1}
+              placement="top"
+              title="Search"
+            >
+              <button
+                className="search-icon"
+                onClick={[Function]}
+              >
+                <ForwardRef(SearchOutlined) />
+              </button>
+            </Tooltip>
+          </React.Fragment>
+        }
+        type="text"
+        value=""
+      />
+    </styled.div>
+  </styled.div>
+</styled.div>
+`;

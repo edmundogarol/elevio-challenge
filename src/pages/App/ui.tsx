@@ -21,7 +21,8 @@ import { getImageResource } from "../../utils/utils";
 export type UiProps = StateProps & DispatchProps;
 
 function Ui(props: UiProps) {
-  const { articles, searchTextCall, searching } = props;
+  const { articles, searchTextCall, searching, searchLog, articleViewLog } =
+    props;
   const [searchText, updateSearchText] = useState<string>("");
   const [searchError, updateSearchError] = useState<string>("");
 
@@ -31,6 +32,7 @@ function Ui(props: UiProps) {
       updateSearchError("Please enter 3 or more letters to search.");
     } else {
       updateSearchError("");
+      searchLog(searchText);
       searchTextCall(searchText);
     }
   };
@@ -81,7 +83,11 @@ function Ui(props: UiProps) {
           />
         )}
         {articles.map((article) => (
-          <NavLink key={article.id} to={`/article/${article.id}/`}>
+          <NavLink
+            key={article.id}
+            to={`/article/${article.id}/`}
+            onClick={() => articleViewLog(article.id)}
+          >
             <ArticleLine>
               <FileTextOutlined />
               <div>{article.title}</div>
